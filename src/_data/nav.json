@@ -1,0 +1,27 @@
+[
+  {
+    "title": "About",
+    "slug": "About",
+    "href": "About.html"
+  },
+  {
+    "title": "BEST Courses",
+    "slug": "BEST Courses",
+    "href": "BEST%20Courses.html"
+  },
+  {
+    "title": "Grow Your Future Track",
+    "slug": "Grow Your Future Track",
+    "href": "Grow%20Your%20Future%20Track.html"
+  },
+  {
+    "title": "Coding Challenge",
+    "slug": "Coding Challenge",
+    "href": "Coding%20Challenge.html"
+  },
+  {
+    "title": "Game Jam",
+    "slug": "Game Jam",
+    "href": "Game%20Jam.html"
+  }
+]
