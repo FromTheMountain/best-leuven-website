@@ -17,7 +17,18 @@
   {
     "title": "Coding Challenge",
     "slug": "Coding Challenge",
-    "href": "Coding%20Challenge.html"
+    "children": [
+      {
+        "title": "2026",
+        "slug": "Coding Challenge",
+        "href": "Coding%20Challenge.html"
+      },
+      {
+        "title": "2025",
+        "slug": "Coding Challenge 2025",
+        "href": "Coding%20Challenge%202025.html"
+      }
+    ]
   },
   {
     "title": "Game Jam",

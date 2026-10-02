@@ -5,9 +5,9 @@
                 src="img/best_leuven_logo.png" alt="BEST"
                 class="h-12 w-auto max-w-[min(42vw,18rem)] object-contain sm:h-14"></a>
         <div
-            class="site-text-sm hidden min-w-0 flex-1 items-center justify-end gap-5 overflow-x-auto font-medium text-[var(--muted)] md:flex">
-            {% include "nav-links.html" %}</div>
-        <details class="group relative shrink-0 md:hidden">
+            class="nav-desktop site-text-sm min-w-0 flex-1 items-center justify-end gap-5 font-medium text-[var(--muted)]">
+            {% include "nav-desktop.html" %}</div>
+        <details class="nav-mobile group relative shrink-0">
             <summary
                 class="grid h-10 w-10 cursor-pointer list-none place-items-center rounded-full border border-black/10 bg-[var(--background)] text-[var(--muted)] [&amp;::-webkit-details-marker]:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
@@ -16,10 +16,11 @@
                     <path d="M4 5h16"></path>
                     <path d="M4 12h16"></path>
                     <path d="M4 19h16"></path>
-                </svg><span class="sr-only">Open navigation</span></summary>
+                </svg><span class="sr-only">Open navigation</span>
+            </summary>
             <div
                 class="site-text-sm absolute right-0 top-[calc(100%+0.75rem)] flex max-h-[70vh] min-w-52 flex-col gap-3 overflow-y-auto rounded-2xl border border-black/10 bg-[var(--header)] p-4 font-semibold text-[var(--muted)] shadow-xl">
-                {% include "nav-links.html" %}</div>
+                {% include "nav-mobile.html" %}</div>
         </details>
     </nav>
 </header>

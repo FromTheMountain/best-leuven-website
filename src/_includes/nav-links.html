@@ -1,3 +1,0 @@
-{%- for item in nav -%}
-<a class="whitespace-nowrap transition hover:text-[var(--text)] aria-[current=page]:text-[var(--primary)]"{% if page.fileSlug == item.slug %} aria-current="page"{% endif %} href="{{ item.href }}">{{ item.title }}</a>
-{%- endfor -%}
