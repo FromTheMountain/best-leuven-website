@@ -1,15 +1,38 @@
 // Progressive enhancement for .carousel: the track already scrolls and snaps
-// without JS; this adds prev/next buttons and autoplay (paused on hover/focus).
+// without JS; this adds prev/next buttons, autoplay (paused on hover/focus) and
+// endless looping. Looping works by cloning the last slide in front of the first
+// and the first slide after the last: when the scroll comes to rest on a clone,
+// we jump (instantly, unnoticeably) to the identical real slide.
 document.querySelectorAll(".carousel").forEach((carousel) => {
   const track = carousel.querySelector(".carousel-track");
-  const slides = [...track.children];
-  if (slides.length < 2) return;
+  const count = track.children.length;
+  if (count < 2) return;
 
-  const goTo = (i) => {
-    const n = (i + slides.length) % slides.length;
-    track.scrollTo({ left: slides[n].offsetLeft - track.offsetLeft, behavior: "smooth" });
+  const clone = (slide) => {
+    const copy = slide.cloneNode(true);
+    copy.setAttribute("aria-hidden", "true");
+    return copy;
   };
+  track.prepend(clone(track.children[count - 1]));
+  track.append(clone(track.children[1]));
+
+  // Positions 0 and count + 1 are the clones; 1..count are the real slides.
   const current = () => Math.round(track.scrollLeft / track.clientWidth);
+  const scrollToIndex = (i, behavior) => track.scrollTo({ left: i * track.clientWidth, behavior });
+  const goTo = (i) => scrollToIndex(Math.max(0, Math.min(count + 1, i)), "smooth");
+
+  const settle = () => {
+    const i = current();
+    if (i === 0) scrollToIndex(count, "instant");
+    else if (i === count + 1) scrollToIndex(1, "instant");
+  };
+  let settleTimer;
+  track.addEventListener("scroll", () => {
+    clearTimeout(settleTimer);
+    settleTimer = setTimeout(settle, 100);
+  });
+  addEventListener("resize", () => scrollToIndex(Math.min(Math.max(current(), 1), count), "instant"));
+  scrollToIndex(1, "instant");
 
   for (const [dir, label, symbol] of [[-1, "Previous photo", "‹"], [1, "Next photo", "›"]]) {
     const button = document.createElement("button");
