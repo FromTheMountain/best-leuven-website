@@ -15,7 +15,7 @@ async function carousel(dir, altPrefix) {
       const metadata = await Image(path.join("src", dir, file), {
         widths: [800, 1600],
         formats: ["webp", "jpeg"],
-        outputDir: path.join("_site", dir),
+        outputDir: path.join("docs", dir),
         urlPath: `${dir}/`,
       });
       const html = Image.generateHTML(metadata, {
@@ -39,11 +39,13 @@ export default function (eleventyConfig) {
   // Top-level images only: photo folders (e.g. img/CC25) go through the carousel shortcode
   eleventyConfig.addPassthroughCopy({ "src/img/*.*": "img" });
   eleventyConfig.addPassthroughCopy("src/js");
+  // Stop GitHub Pages from running Jekyll on the output
+  eleventyConfig.addPassthroughCopy({ "src/.nojekyll": ".nojekyll" });
 
   eleventyConfig.addAsyncShortcode("carousel", carousel);
 
   return {
-    dir: { input: "src", output: "_site" },
+    dir: { input: "src", output: "docs" },
     htmlTemplateEngine: "liquid",
   };
 }

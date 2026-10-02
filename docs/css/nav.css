@@ -1,0 +1,72 @@
+/* Navigation: desktop bar with a dropdown, collapsing to a details menu below 1024px. */
+.nav-desktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .nav-desktop {
+    display: flex;
+  }
+
+  .nav-mobile {
+    display: none;
+  }
+}
+
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-dropdown>.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-dropdown>.nav-link svg {
+  transition: transform 0.15s;
+}
+
+.nav-dropdown:hover>.nav-link svg,
+.nav-dropdown:focus-within>.nav-link svg {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* top padding bridges the gap so hover is not lost between link and menu */
+  padding-top: 0.75rem;
+  z-index: 40;
+}
+
+.nav-dropdown:hover>.nav-dropdown-menu,
+.nav-dropdown:focus-within>.nav-dropdown-menu {
+  display: block;
+}
+
+.nav-dropdown-menu>a {
+  display: block;
+  padding: 0.5rem 1.25rem;
+  background: var(--header);
+  border-left: 1px solid rgb(0 0 0 / 0.1);
+  border-right: 1px solid rgb(0 0 0 / 0.1);
+}
+
+.nav-dropdown-menu>a:first-child {
+  border-top: 1px solid rgb(0 0 0 / 0.1);
+  border-radius: 1rem 1rem 0 0;
+  padding-top: 0.75rem;
+}
+
+.nav-dropdown-menu>a:last-child {
+  border-bottom: 1px solid rgb(0 0 0 / 0.1);
+  border-radius: 0 0 1rem 1rem;
+  padding-bottom: 0.75rem;
+  box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1);
+}
