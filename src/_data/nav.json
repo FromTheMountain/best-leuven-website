@@ -1,38 +1,38 @@
 [
   {
     "title": "About",
-    "slug": "About",
-    "href": "About.html"
+    "slug": "about",
+    "href": "/pages/about"
   },
   {
     "title": "BEST Courses",
-    "slug": "BEST Courses",
-    "href": "BEST%20Courses.html"
+    "slug": "best-courses",
+    "href": "/pages/best-courses"
   },
   {
     "title": "Grow Your Future Track",
-    "slug": "Grow Your Future Track",
-    "href": "Grow%20Your%20Future%20Track.html"
+    "slug": "grow-your-future-track",
+    "href": "/pages/grow-your-future-track"
   },
   {
     "title": "Coding Challenge",
-    "slug": "Coding Challenge",
+    "slug": "coding-challenge",
     "children": [
       {
         "title": "2026",
-        "slug": "Coding Challenge",
-        "href": "Coding%20Challenge.html"
+        "slug": "coding-challenge",
+        "href": "/pages/coding-challenge"
       },
       {
         "title": "2025",
-        "slug": "Coding Challenge 2025",
-        "href": "Coding%20Challenge%202025.html"
+        "slug": "coding-challenge-2025",
+        "href": "/pages/coding-challenge-2025"
       }
     ]
   },
   {
     "title": "Game Jam",
-    "slug": "Game Jam",
-    "href": "Game%20Jam.html"
+    "slug": "game-jam",
+    "href": "/pages/game-jam"
   }
 ]

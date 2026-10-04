@@ -16,7 +16,7 @@ async function carousel(dir, altPrefix) {
         widths: [800, 1600],
         formats: ["webp", "jpeg"],
         outputDir: path.join("docs", dir),
-        urlPath: `${dir}/`,
+        urlPath: `/${dir}/`,
       });
       const html = Image.generateHTML(metadata, {
         alt: `${altPrefix} ${i + 1}`,
@@ -39,6 +39,8 @@ export default function (eleventyConfig) {
   // Top-level images only: photo folders (e.g. img/CC25) go through the carousel shortcode
   eleventyConfig.addPassthroughCopy({ "src/img/*.*": "img" });
   eleventyConfig.addPassthroughCopy("src/js");
+  // Keep the custom domain across rebuilds
+  eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
   // Stop GitHub Pages from running Jekyll on the output
   eleventyConfig.addPassthroughCopy({ "src/.nojekyll": ".nojekyll" });
 
