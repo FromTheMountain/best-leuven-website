@@ -33,6 +33,17 @@
   {
     "title": "Game Jam",
     "slug": "game-jam",
-    "href": "/pages/game-jam"
+    "children": [
+      {
+        "title": "2026",
+        "slug": "game-jam",
+        "href": "/pages/game-jam"
+      },
+      {
+        "title": "2025",
+        "slug": "game-jam-2025",
+        "href": "/pages/game-jam-2025"
+      }
+    ]
   }
 ]
