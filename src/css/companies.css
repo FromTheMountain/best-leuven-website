@@ -1,0 +1,25 @@
+.company-lead { font-size: 1.35rem; line-height: 1.5; color: var(--muted); margin: 0; }
+.stat-strip { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); margin-top: 2.5rem; }
+.stat { border-radius: 1.5rem; background: var(--surface); padding: 1.5rem; text-align: center; outline: 1px solid rgb(0 0 0 / 0.05); }
+.stat-value { display: block; font-size: 2.5rem; font-weight: 700; line-height: 1.1; color: var(--primary); }
+.stat-label { display: block; margin-top: 0.25rem; color: var(--muted); font-weight: 500; }
+.company-section { margin-top: 4rem; }
+.company-section h2 { font-size: 1.75rem; font-weight: 600; margin: 0 0 1.5rem; }
+.company-columns { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
+.company-card { border-radius: 1.5rem; background: var(--surface); padding: 2rem; outline: 1px solid rgb(0 0 0 / 0.05); box-shadow: 0 1px 2px rgb(0 0 0 / 0.05); }
+.company-card h3 { font-size: 1.35rem; font-weight: 600; margin: 0 0 0.75rem; }
+.company-card p, .company-card li { color: var(--muted); }
+.company-card p { margin: 0 0 1rem; }
+.company-card ul { margin: 0 0 1rem; padding-left: 1.25rem; list-style: disc; display: grid; gap: 0.35rem; }
+.company-card > :last-child { margin-bottom: 0; }
+.company-examples { margin-top: 1.5rem; border-left: 4px solid var(--accent); padding-left: 1rem; }
+.company-examples h4 { font-weight: 600; margin: 0 0 0.5rem; }
+.company-examples p { margin: 0 0 0.5rem; }
+.company-cta { margin-top: 4rem; border-radius: 2rem; background: var(--primary); color: #fff; padding: 3rem 2rem; text-align: center; }
+.company-cta h2 { font-size: 1.75rem; font-weight: 600; margin: 0 0 0.75rem; }
+.company-cta p { margin: 0 0 1.5rem; opacity: 0.9; }
+.company-cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+.company-cta a { border-radius: 9999px; padding: 0.7rem 1.5rem; font-weight: 600; text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; }
+.company-cta a:hover { transform: translateY(-2px); box-shadow: 0 8px 16px -4px rgb(0 0 0 / 0.3); }
+.company-cta-primary { background: #fff; color: var(--primary); }
+.company-cta-secondary { border: 2px solid #fff; color: #fff; }

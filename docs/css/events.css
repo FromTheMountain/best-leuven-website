@@ -1,0 +1,31 @@
+.event-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); }
+.event-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background: var(--surface);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+  outline: 1px solid rgb(0 0 0 / 0.05);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.event-card:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.15); }
+.event-card-image { aspect-ratio: 16 / 9; width: 100%; background: var(--surface); }
+.event-card-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.event-card-image.contain img { object-fit: contain; padding: 1rem; }
+.event-card-body { display: flex; flex: 1; flex-direction: column; gap: 0.75rem; padding: 1.5rem; }
+.event-card-title { font-size: 1.35rem; font-weight: 600; margin: 0; }
+.event-card-description { color: var(--muted); margin: 0; }
+.event-card-participants { font-size: 0.875rem; font-weight: 600; color: var(--primary); margin: 0; }
+.event-card-button {
+  margin-top: auto;
+  align-self: flex-start;
+  border-radius: 9999px;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.6rem 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.event-card-button:hover { transform: translateY(-2px); box-shadow: 0 8px 16px -4px rgb(0 0 0 / 0.25); }

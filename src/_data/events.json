@@ -1,0 +1,38 @@
+[
+  {
+    "title": "BEST Course",
+    "image": "/img/best_courses_logo.png",
+    "fit": "contain",
+    "description": "Our biggest event. A 10 day feel-good summer course for European STEM-students. The academics, social activities, food and accommodation are organised by us.",
+    "participants": "20",
+    "href": "/pages/best-courses"
+  },
+  {
+    "title": "Grow Your Future Track",
+    "image": "/img/gyft_logo.png",
+    "description": "4-5 consecutive wednesday evenings where companies give talks to STEM-students to develop soft skills. After the talks, a reception takes place for networking.",
+    "participants": "50-60",
+    "href": "/pages/grow-your-future-track"
+  },
+  {
+    "title": "Coding Challenge",
+    "image": "/img/coding_challenge_header.png",
+    "description": "An evening competition where students compete to complete as many difficult IT challenges as possible.",
+    "participants": "60",
+    "href": "/pages/coding-challenge"
+  },
+  {
+    "title": "Game Jam",
+    "image": "/img/game_jam_header.png",
+    "description": "A 48-hour period where students create their own games from scratch. Coaches and keynotes are here during the whole weekend to guide them through this process.",
+    "participants": "80",
+    "href": "/pages/game-jam"
+  },
+  {
+    "title": "ATHENS",
+    "image": "/img/arenberg_campus.jpg",
+    "description": "An event partnered with KU Leuven. International students follow a one-week university course in STEM. BEST organises the social/cultural activities.",
+    "participants": "50",
+    "href": "https://athensnetwork.eu/"
+  }
+]

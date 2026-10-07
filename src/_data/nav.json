@@ -5,6 +5,11 @@
     "href": "/pages/about"
   },
   {
+    "title": "Events",
+    "slug": "events",
+    "href": "/pages/events"
+  },
+  {
     "title": "BEST Courses",
     "slug": "best-courses",
     "href": "/pages/best-courses"
@@ -45,5 +50,10 @@
         "href": "/pages/game-jam-2025"
       }
     ]
+  },
+  {
+    "title": "For Companies",
+    "slug": "for-companies",
+    "href": "/pages/for-companies"
   }
 ]
